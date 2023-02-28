@@ -1,0 +1,46 @@
+<div class="registration-container">
+    <div class="form">
+        <form [formGroup]="rForm" (ngSubmit)="onSubmit()">
+            <div class="field-container">
+                <label>First Name</label><br>
+                <input type="text" formControlName="firstname" />
+            </div>
+            <div class="field-container">
+                <label>Last Name</label><br>
+                <input type="text" formControlName="lastname" />
+            </div>
+            <div class="field-container">
+                <label>Phone Number</label><br>
+                <input type="text" formControlName="phoneno" />
+            </div>
+            <div class="field-container">
+                <label>Email Address</label><br>
+                <input type="email" formControlName="email" />
+            </div>
+            <div class="field-container">
+                <label>Password</label><br>
+                <input type="password" formControlName="password" />
+            </div>
+            <div class="field-container">
+                <label>Confirm Password</label><br>
+                <input type="password" formControlName="cpassword" /><br>
+                <span *ngIf="!isPasswordMatched" style="color: red;">password not matched</span>
+            </div>
+            <div class="field-container">
+                <button class="submit" [disabled]="!rForm.valid">Register</button>
+            </div>
+        </form>
+        <div class="auth-actions">
+            <a style="cursor: pointer;" (click)="redirectToForgotPassword()">Lost your password?</a><br>
+            <span>Already registered? <a style="cursor: pointer; color: blue;" (click)="redirectToLogin()">Login now</a></span>
+        </div>
+    </div>
+</div>
+
+
+ 
+       
+       
+       
+       
+      

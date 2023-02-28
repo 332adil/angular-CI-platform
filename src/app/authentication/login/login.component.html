@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div class="form">
+        <form [formGroup]="lForm" (ngSubmit)="onSubmit()">
+            <div class="field-container">
+                <label>Email Address</label><br>
+                <input type="text" formControlName="email"/>
+            </div>
+            <div class="field-container">
+                <label>Password</label><br>
+                <input type="password" formControlName="password"/>
+            </div>
+            <div class="field-container">
+                <button class="submit" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="auth-actions">
+            <a style="cursor: pointer;" (click)="redirectToForgotPassword()">Lost your password?</a><br>
+            <span>Don't have an account? <a style="cursor: pointer; color: blue;" (click)="redirectToRegistration()">Create an account</a></span>
+        </div>
+    </div>
+</div>

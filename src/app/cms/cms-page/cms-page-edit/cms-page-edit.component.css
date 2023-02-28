@@ -1,0 +1,53 @@
+.cms-container {
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(25, 5, 5, 0.1);
+    height: 40px;
+}
+
+.description {
+    width: 90%;
+    min-height: 500px;
+}
+
+select {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(25, 5, 5, 0.1);
+    height: 40px;
+}
+
+.form-actions {
+    float: right;
+    /* margin-right: 10%; */
+    margin-top: 10px;
+}
+
+button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: white;
+    height: 40px;
+    width: 100px;
+}
+
+.cancel-button {
+    border: 1px solid rgb(91, 90, 90);
+    color: rgb(91, 90, 90);
+}
+
+.save-button {
+    border: 1px solid orange;
+    color: orange;
+    margin-left: 10px;
+}
+
+.form-item {
+    margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+.dialog-buttons {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    outline: none;
+}
+
+.cancel-button {
+    background-color: white;
+    color: rgb(115, 118, 117);
+    border: 1px solid rgb(115, 118, 117);
+}
+
+.delete-button {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}

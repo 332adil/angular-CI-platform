@@ -1,0 +1,23 @@
+<mat-sidenav-container class="app-container">
+    <mat-sidenav class="app-sidenav" [class.mat-elevation-z4]="true" #sidenav="matSidenav" opened mode="push">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="shadow">
+            <button mat-icon-button (click)="sidenav.toggle()" class="toggle-button">
+                <mat-icon *ngIf="!sidenav.opened">
+                    menu
+                </mat-icon>
+                <mat-icon *ngIf="sidenav.opened">
+                    close
+                </mat-icon>
+            </button>
+                {{ currentDate | date : 'fullDate' }}
+                <span class="user-profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJzEaxLN-jGRYYUO65pWu7Q9GXoNt4LUSSA&usqp=CAU" width="25" height="25" class="user-img"/>
+                    <span>Evan donohue</span>
+                </span>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

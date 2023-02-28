@@ -1,0 +1,52 @@
+.user-container {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    border-radius: 10px;
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+    padding: 8px 8px 8px 8px;
+    margin-right: 10px;
+}
+
+.user-list {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+mat-icon{
+    vertical-align: middle;
+    color: orange;
+}
+
+td {
+    font-family: Cambria;
+}
+
+td:first-child {
+    border-left: 1px solid rgba(23, 22, 22, 0.2);
+}
+
+th:first-child {
+    border-left: 1px solid rgba(23, 22, 22, 0.2);
+}
+
+td:last-child {
+    border-right: 1px solid rgba(23, 22, 22, 0.2);
+}
+
+th:last-child {
+    border-right: 1px solid rgba(23, 22, 22, 0.2);
+}
+
+tr {
+    border-bottom: 1px solid rgba(23, 22, 22, 0.2);
+}
+

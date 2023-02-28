@@ -1,0 +1,56 @@
+<div class="user-container">
+    <h2>Mission Page</h2>
+    <hr>
+    <div class="row">
+       <div class="col-md-3">
+           <input type="text" placeholder="Search"/>
+       </div>
+       <div class="col-md-7"></div>
+       <div class="col-md-2">
+           <button (click)="redirectToAdd()">
+               <mat-icon>add</mat-icon>
+               Add
+           </button>
+       </div>
+    </div>
+
+    <div class="user-list">
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.missionTitle}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="theme">
+                <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Theme </th>
+                <td mat-cell *matCellDef="let element">{{ element.missionTheme}}</td>
+              </ng-container>
+ 
+              <ng-container matColumnDef="start-date">
+                <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Start Date </th>
+                <td mat-cell *matCellDef="let element">{{ element.missionStartDate}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="end-date">
+                <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> End Date </th>
+                <td mat-cell *matCellDef="let element">{{ element.missionEndDate}}</td>
+              </ng-container>
+ 
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Action </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <mat-icon style="cursor: pointer;" (click)="edit(element.id)">edit</mat-icon>
+                    <mat-icon style="cursor: pointer;">delete</mat-icon>
+                </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+ 
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                  showFirstLastButtons
+                  aria-label="Select page of periodic elements">
+         </mat-paginator>
+     </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="user-container">
+    <h2>CMS Page</h2>
+    <hr>
+    <div class="row">
+       <div class="col-md-3">
+           <input type="text" placeholder="Search" (keyup)="filterData($event)"/>
+       </div>
+       <div class="col-md-7"></div>
+       <div class="col-md-2">
+           <button (click)="addCmsPage()">
+               <mat-icon>add</mat-icon>
+               Add
+           </button>
+       </div>
+    </div>
+    <div class="user-list">
+       <table mat-table [dataSource]="dataSource">
+           <ng-container matColumnDef="demo-title">
+               <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Title </th>
+               <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+             </ng-container>
+
+             <ng-container matColumnDef="demo-status">
+               <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Status </th>
+               <td mat-cell *matCellDef="let element"> <span class="badge bg-success">{{ element.status == '1' ? 'Active' : 'Deactive' }}</span></td>
+             </ng-container>
+
+             <ng-container matColumnDef="demo-action">
+               <th mat-header-cell *matHeaderCellDef [style.background-color]="color"> Action </th>
+               <td mat-cell *matCellDef="let element"> 
+                   <mat-icon (click)="edit(element.id)" style="cursor: pointer;">edit</mat-icon>
+                   <mat-icon (click)="delete(element.id)" style="cursor: pointer;">delete</mat-icon>
+               </td>
+             </ng-container>
+           
+             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       </table>
+
+       <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

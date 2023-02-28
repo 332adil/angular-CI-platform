@@ -1,0 +1,143 @@
+<div class="form-container">
+    <form [formGroup]="mForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mission Title</label><br>
+                    <input type="text" formControlName="missionTitle"/>
+                </div>
+                <div class="col-md-6">
+                    <label>Mission Short Description</label><br>
+                    <input type="text" formControlName="missionShortDescription"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Mission Description</label><br>
+                    <angular-editor formControlName="missionDescription"></angular-editor>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Country</label><br>
+                    <select formControlName="country">
+                        <option>Select country</option>
+                        <option>India</option>
+                        <option>UAE</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label>City</label><br>
+                    <select formControlName="city">
+                        <option>Select City</option>
+                        <option>London</option>
+                        <option>Dubai</option>
+                        <option>New York</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mission Organisation Name</label><br>
+                    <input type="text" formControlName="missionOraganisationName"/>
+                </div>
+                <div class="col-md-6">
+                    <label>Mission Organisation Detail</label><br>
+                    <input type="text" formControlName="missionOrganisationDetail"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mission Start Date</label><br>
+                    <input type="date" formControlName="missionStartDate"/>
+                </div>
+                <div class="col-md-6">
+                    <label>Mission End Date</label><br>
+                    <input type="date" formControlName="missionEndDate"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mission Type</label><br>
+                    <select formControlName="missionType">
+                        <option>Select Type</option>
+                        <option>Time</option>
+                        <option>Goal</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label>Mission Total Seats</label><br>
+                    <input type="number" formControlName="totalSeats"/>
+                </div>
+                <div class="col-md-3">
+                    <label>Mission registration deadline</label><br>
+                    <input type="date" formControlName="missionRegistrationDeadline"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mission Theme</label><br>
+                    <input type="text" formControlName="missionTheme"/>
+                </div>
+                <div class="col-md-6">
+                    <label>Mission Skill</label><br>
+                    <select multiple formControlName="missionSkills">
+                        <option>Maths</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Image</label>
+                    <input type="text" #image/>
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <button class="circular-add-button" type="button" (click)="addImage(image)">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-list" formArrayName="images">
+            <div class="row" *ngFor="let item of controls; let i = index" [formGroupName]="i">
+                <div class="col-md-6">
+                    <input type="text" formControlName="image"/>
+                </div>
+                <div class="col-md-3">
+                    <img src="{{'../../../../assets/'+getImage(item)}}" width="100" height="50"/>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-danger" (click)="removeImage(i)">X</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row-button">
+            <button class="circular-cancel-button">Cancel</button>
+            <button class="circular-add-button" style="margin-left: 10px;">Save</button>
+        </div>
+    </form> 
+</div>

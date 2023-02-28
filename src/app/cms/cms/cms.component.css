@@ -1,0 +1,49 @@
+mat-sidenav-container {
+    background-color: white;
+}
+
+.app-container {
+    height: 100%;
+    margin: 0;
+}
+
+.app-sidenav {
+    width: 230px;
+    background-color: #f88634;
+}
+
+.app {
+    display: flex;
+}
+
+.toggle-button {
+    background-color: #f88634;
+    color: white;
+    border: 1px solid white;
+    margin-right: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+mat-icon {
+    vertical-align: middle;
+}
+
+mat-toolbar {
+    background-color: white;
+    box-shadow: 0 0 0 0;
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.user-profile {
+    text-align: right;
+    /* display: inline-block; */
+    width: 100%;
+    margin-right: 20px;
+}
+
+.user-img {
+    border-radius: 50px;
+    margin-right: 10px;
+}

@@ -1,0 +1,37 @@
+.form-container {
+    margin: 20px;
+}
+
+.form-row {
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    height: 35px;
+    border: 1px solid rgba(74, 73, 73,0.2);
+}
+
+select {
+    width: 100%;
+    border: 1px solid rgba(74, 73, 73,0.2);
+    height: 35px;
+    outline: none;
+}
+
+.form-row-button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+}
+
+.image-list {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,20 @@
+export class AuthUser {
+    public id : number;
+    public firstname : string;
+    public lastname : string;
+    public phoneNumber : string;
+    public email : string;
+    public password : string;
+    public profileImage : string;
+    public emp_id : string;
+    public manager : string;
+    public title : string;
+    public department : string;
+    public profileComment : string;
+    public volunteerComment : string;
+    public city : string;
+    public country : string;
+    public availibility : string;
+    public linkedin : string;
+    public skills : string[];
+}

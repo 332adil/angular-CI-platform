@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Mission Theme</h1>
+<div class="form-container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-field">
+            <label>Theme Name</label><br>
+            <input type="text" name="name" ngModel/>
+        </div>
+        <div class="form-field">
+            <label>Status</label><br>
+            <select name="status" ngModel>
+                <option value="0">Select status</option>
+                <option value="1">Active</option>
+                <option value="2">Deactive</option>
+            </select>
+        </div>
+        <div class="form-field-action">
+            <button class="circular-cancel-button" type="button" (click)="closeDialog()">Cancel</button> &nbsp;
+            <button class="circular-add-button">Save</button>
+        </div>
+    </form>
+</div>

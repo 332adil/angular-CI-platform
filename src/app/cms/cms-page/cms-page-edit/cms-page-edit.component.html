@@ -1,0 +1,37 @@
+<div class="cms-container">
+    <div class="card">
+        <div class="card-header">
+            <h3>{{ headerTitle}}</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="cForm" (ngSubmit)="onSubmit()">
+                <div class="form-item">
+                    <label>Title</label><br>
+                    <input type="hidden" formControlName="id"/>
+                    <input type="text" formControlName="title"/>
+                </div>
+                <div class="form-item">
+                    <label>Description</label><br>
+                    <angular-editor class="description" formControlName="description"></angular-editor>
+                    <!-- <input type="text" formControlName="description"/> -->
+                </div>
+                <div class="form-item">
+                    <label>Slug</label><br>
+                    <input type="text" formControlName="slug"/>
+                </div>
+                <div class="form-item">
+                    <label>Status</label><br>
+                    <select formControlName="status">
+                        <option value="0">Select status</option>
+                        <option value="1">Active</option>
+                        <option value="2">Deactive</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button class="cancel-button" type="button" (click)="redirectToList()">Cancel</button>
+                    <button class="save-button">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
